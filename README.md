@@ -21,5 +21,5 @@ implementation("com.android.volley:volley:1.2.1")
 
 Nhấn Async Now để Android Studio download và nạp thư viện vào project.<br>
 **`Lưu ý:`** *Để sử dụng Volley chúng ta phải cấp quyền Internet trong __AndroidManifest.xml__*
-> **String Request**
+##### **String Request**
 ## []()

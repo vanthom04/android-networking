@@ -389,17 +389,17 @@ ApiPlaceholder.apiService.postPost(info).enqueue(new Callback<Post>() {
 #### Xây dựng Web API
 1. **Tạo Database**
 
-    - **Tạo database:**
+**Tạo database:**
 ```sql
 create database <database name>
 ```
 
-    - **Truy xuất Database:**
+**Truy xuất Database:**
 ```sql
 use <database name>
 ```
 
-    - **Tạo table:**
+**Tạo table:**
 ```sql
 create table <table name>(...)
 ```

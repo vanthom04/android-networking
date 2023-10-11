@@ -10,16 +10,16 @@
 **JSONArrayRequest:** Là HTTP request có response trả về là JSONArray. <br>
 **ImageRequest:** Là HTTP request có response trả về là Bitmap.<br>
 
-`Install:`
-Trước tiên chúng ta phải import thư viện này vào Android
-Studio. Copy và paste dòng dưới đây là **dependencies** trong
-file **build.gradle** của module **app**
+`Install:`<br>
+
+Trước tiên chúng ta phải import thư viện này vào Android Studio. 
+Copy và paste dòng dưới đây là **dependencies** trong file **build.gradle** của module **app**
 
 ```java
 implementation("com.android.volley:volley:1.2.1")
 ```
 
 Nhấn Async Now để Android Studio download và nạp thư viện vào project.<br>
-`**Lưu ý: **`Để sử dụng Volley chúng ta phải cấp quyền Internet trong AndroidManifest.xml
+**`Lưu ý:`** Để sử dụng Volley chúng ta phải cấp quyền Internet trong AndroidManifest.xml
 
 ## []()

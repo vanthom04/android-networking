@@ -410,6 +410,7 @@ create table <table name>(...)
 - **UPDATE** được sử dụng khi bạn muốn thay đổi (hoặc cập nhật) dữ liệu sẵn có.
 - **DELETE** được sử dụng khi bạn muốn loại bỏ (hoặc xóa) dữ liệu sẵn có.
 
+
 2. **Tạo Web API (PHP)**
 
 3. **Kết nối Android với Web API (PHP)**

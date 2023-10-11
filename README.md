@@ -281,10 +281,10 @@ queue.add(stringRequest);
 ```
 
 ## [Thư viện Retrofit](https://square.github.io/retrofit/)
-- Retrofit là một Rest Client cho Android và Java và được tạo ra bởi Square. 
+- **Retrofit** là một Rest Client cho Android và Java và được tạo ra bởi Square. 
 Nó giúp cho việc nhận và tải lên JSON (hoặc dữ liệu khác) một cách khá dễ dàng tới một WebService dựa trên mô hình REST.<br>
-- Mở file build.gradle lên và import thư viện Retrofit và GSON. 
-Khi sử dụng Retrofit thì thư viện GSON sẽ giúp chúng ta convert từ Java objects thành JSON và ngược lại.<br>
+- Mở file **`build.gradle`** lên và import thư viện **Retrofit** và **GSON**. 
+Khi sử dụng **Retrofit** thì thư viện **GSON** sẽ giúp chúng ta convert từ Java objects thành JSON và ngược lại.<br>
 #### Thêm thư viện Retrofit và Gson
 Trước tiên chúng ta phải import thư viện này vào Android Studio. 
 Copy và paste dòng dưới đây là **dependencies** trong file **`build.gradle`** của module **app**
@@ -334,6 +334,8 @@ public void retrofitCallApi() {
 
         @Override
         public void onFailure(Call<Post> call, Throwable t) {
+            // TODO: Handle error
+            // Alert error
             Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
         }
     });
@@ -353,6 +355,8 @@ ApiPlaceholder.apiService.getPosts().enqueue(new Callback<ArrayList<Post>>() {
 
     @Override
     public void onFailure(Call<ArrayList<Post>> call, Throwable t) {
+        // TODO: Handle error
+        // Alert error
         Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
     }
 });
@@ -367,14 +371,22 @@ Info info = new Info(101, "title 101", "body 101");
 ApiPlaceholder.apiService.postPost(info).enqueue(new Callback<Post>() {
     @Override
     public void onResponse(Call<Post> call, Response<Post> response) {
-        Toast.makeText(MainActivity.this, String.valueOf(response.body().getId()), Toast.LENGTH_SHORT).show();
+        // Alert message
+        String message = String.valueOf(response.body().getId());
+        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onFailure(Call<Post> call, Throwable t) {
+        // TODO: Handle error
+        // Alert error
         Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
     }
 });
 ```
 
-## Web API
+## Web API (Application Programming Interface)
+#### Xây dựng Web API
+1. Tạo database
+2. Tạo Web API (PHP)
+3. Kết nối Android với Web API (PHP)

@@ -25,7 +25,7 @@ tiếp theo là dấu hai chấm và tiếp theo là giá trị (giá trị có 
 "age": 18
 ```
 
-- Đối tượng JSON (JSON Object): được viết trong cặp dấu ngoặc nhọn "**{}**". 
+- Đối tượng JSON (JSON Object): được viết trong cặp dấu ngoặc nhọn "**{ }**". 
 Trong một đối tượng có có nhiều cặp tên / giá trị phân cách nhau bằng dấu phẩy "**,**".
 
 **Ví dụ:**
@@ -38,7 +38,7 @@ Trong một đối tượng có có nhiều cặp tên / giá trị phân cách 
 }
 ```
 
-- Mảng JSON (JSON Array): được bọc trong dấu ngoặc vuông "**[]**".
+- Mảng JSON (JSON Array): được bọc trong dấu ngoặc vuông "**[ ]**".
 Một mảng có thể chứa nhiều đối tượng (object).
 
 **Ví dụ:**

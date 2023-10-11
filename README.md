@@ -11,7 +11,7 @@
 
 #### Định dạng dữ liệu Json
 - Cú pháp json theo các qui định sau:
--- Dữ liệu gồm các cặp tên / giá trị
+-> Dữ liệu gồm các cặp tên / giá trị
 
 ## [Thư viện Volley](https://google.github.io/volley/)
 

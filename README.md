@@ -1,5 +1,18 @@
 # Android Networking
 
+## Json
+#### Các kiểu dữ liệu Json
+- Number
+- String
+- Boolean
+- Null
+- Object
+- Array
+
+#### Định dạng dữ liệu Json
+- Cú pháp json theo các qui định sau:
+-- Dữ liệu gồm các cặp tên / giá trị
+
 ## [Thư viện Volley](https://google.github.io/volley/)
 
 #### Các class sử dụng trong Volley:
@@ -19,7 +32,7 @@ implementation("com.android.volley:volley:1.2.1")
 ```
 
 Nhấn **Async Now** để Android Studio download và nạp thư viện vào project.<br>
-**`Lưu ý:`** *Để sử dụng Volley chúng ta phải cấp quyền Internet trong __AndroidManifest.xml__*
+**Lưu ý:** *Để sử dụng Volley chúng ta phải cấp quyền Internet trong __`AndroidManifest.xml`__*
 #### String Request
 ```java
 // Instantiate the RequestQueue
@@ -195,12 +208,10 @@ queue.add(stringRequest);
 ```
 
 ## [Thư viện Retrofit](https://square.github.io/retrofit/)
-- Retrofit là một Rest Client cho Android và Java và được tạo ra bởi
-Square. Nó giúp cho việc nhận và tải lên JSON (hoặc dữ liệu khác)
-một cách khá dễ dàng tới một WebService dựa trên mô hình REST.<br>
-- Mở file build.gradle lên và import thư viện Retrofit và GSON. Khi
-sử dụng Retrofit thì thư viện GSON sẽ giúp chúng ta convert từ
-Java objects thành JSON và ngược lại.<br>
+- Retrofit là một Rest Client cho Android và Java và được tạo ra bởi Square. 
+Nó giúp cho việc nhận và tải lên JSON (hoặc dữ liệu khác) một cách khá dễ dàng tới một WebService dựa trên mô hình REST.<br>
+- Mở file build.gradle lên và import thư viện Retrofit và GSON. 
+Khi sử dụng Retrofit thì thư viện GSON sẽ giúp chúng ta convert từ Java objects thành JSON và ngược lại.<br>
 #### Thêm thư viện Retrofit và Gson
 Trước tiên chúng ta phải import thư viện này vào Android Studio. 
 Copy và paste dòng dưới đây là **dependencies** trong file **`build.gradle`** của module **app**

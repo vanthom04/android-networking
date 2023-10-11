@@ -38,3 +38,24 @@ implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 ```
 Nhấn Async Now để Android Studio download và nạp thư viện vào project.<br>
+##### Gọi API lấy dữ liệu
+```java
+public interface ApiPlaceholder {
+    Gson gson = new Gson();
+    Retrofit retrofit = new Retrofit.Builder()
+            .baseUrl("https://jsonplaceholder.typicode.com/")
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build();
+    ApiPlaceholder apiService = retrofit.create(ApiPlaceholder.class);
+
+    @GET("posts/{id}")
+    Call<Post> getPostId(@Path("id") int id);
+
+    @GET("posts")
+    Call<ArrayList<Post>> getPosts();
+
+    @POST("posts")
+    Call<Post> postPost(@Body Info info);
+
+}
+```

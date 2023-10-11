@@ -56,6 +56,36 @@ Một mảng có thể chứa nhiều đối tượng (object).
     ]
 }
 ```
+
+#### Json Parser
+- Tạo đối tượng JSONObject
+```java
+JSONObject jsonObject = new JSONObject(result);
+```
+
+- Lấy chuỗi
+```java
+String jsonString = jsonObject.getString("TenChuoi");
+```
+
+- Lấy boolean
+```java
+String jsonBoolean = jsonObject.getBoolean("TenBoolean");
+```
+
+- Lấy mảng
+```java
+JSONArray jsonArray = jsonObject.getJSONArray("TenArray");
+```
+
+- Lấy item từ mảng
+```java
+for (int i = 0; i < jsonArray.length; i++) {
+    JSONObject object = jsonArray.getJSONObject(i);
+    String item = object.getString("StringNameArray");
+}
+```
+
 ## [Thư viện Volley](https://google.github.io/volley/)
 
 #### Các class sử dụng trong Volley:

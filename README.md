@@ -38,7 +38,7 @@ implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 ```
 Nhấn Async Now để Android Studio download và nạp thư viện vào project.<br>
-##### Gọi API lấy dữ liệu
+#### Gọi API lấy dữ liệu
 ```java
 public interface ApiPlaceholder {
     Gson gson = new Gson();

@@ -338,6 +338,7 @@ public void retrofitCallApi() {
     });
 }
 ```
+<br>
 
 - Lấy tất cả dữ liệu và lưu vào ArrayList
 ```java
@@ -374,5 +375,6 @@ ApiPlaceholder.apiService.postPost(info).enqueue(new Callback<Post>() {
     }
 });
 ```
+<br>
 
 ## Web API

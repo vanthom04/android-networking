@@ -13,8 +13,8 @@
 - Cú pháp json theo các qui định sau:
     - Dữ liệu gồm các cặp tên/giá trị
     - Dữ liệu được phân cách dấu phẩy "**,**"
-    - Dấu ngoặc nhọn "**{}**" dùng để giữ các đối tượng (object).
-    - Dấu ngoặc vuông "**[]**" dùng để giữ các mảng (array)
+    - Dấu ngoặc nhọn "**{ }**" dùng để giữ các đối tượng (object).
+    - Dấu ngoặc vuông "**[ ]**" dùng để giữ các mảng (array)
 
 - Dữ liệu được viết là các **cặp tên/giá trị**. Một cặp tên/giá trị gồm 1 trường tên đặt trong dấu nháy kép, 
 tiếp theo là dấu hai chấm và tiếp theo là giá trị (giá trị có dấu nháy kép hay không tùy theo kiểu dữ liệu).
@@ -337,3 +337,5 @@ public void retrofitCallApi() {
     });
 }
 ```
+
+### Web API

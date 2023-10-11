@@ -387,8 +387,21 @@ ApiPlaceholder.apiService.postPost(info).enqueue(new Callback<Post>() {
 
 ## Web API (Application Programming Interface)
 #### Xây dựng Web API
-1. **Tạo database**
+1. **Tạo Database**
+**Tạo database:**
+```sql
+create database <database name>
+```
 
+**Truy xuất Database:**
+```sql
+use <database name>
+```
+
+**Tạo table:**
+```sql
+create table <table name>(...)
+```
 2. **Tạo Web API (PHP)**
 
 3. **Kết nối Android với Web API (PHP)**

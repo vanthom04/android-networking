@@ -12,7 +12,7 @@
 
 #### Thêm thư viện Volley
 Trước tiên chúng ta phải import thư viện này vào Android Studio. 
-Copy và paste dòng dưới đây là **dependencies** trong file **build.gradle** của module **app**
+Copy và paste dòng dưới đây là **dependencies** trong file & **`build.gradle`** của module **app**
 
 ```java
 implementation("com.android.volley:volley:1.2.1")
@@ -203,7 +203,7 @@ sử dụng Retrofit thì thư viện GSON sẽ giúp chúng ta convert từ
 Java objects thành JSON và ngược lại.<br>
 #### Thêm thư viện Retrofit và Gson
 Trước tiên chúng ta phải import thư viện này vào Android Studio. 
-Copy và paste dòng dưới đây là **dependencies** trong file **build.gradle** của module **app**
+Copy và paste dòng dưới đây là **dependencies** trong file **`build.gradle`** của module **app**
 ```java
 implementation("com.google.code.gson:gson:2.10.1")
 implementation("com.squareup.retrofit2:retrofit:2.9.0")

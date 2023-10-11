@@ -195,10 +195,10 @@ queue.add(stringRequest);
 ```
 
 ## [Thư viện Retrofit](https://square.github.io/retrofit/)
-Retrofit là một Rest Client cho Android và Java và được tạo ra bởi
+- Retrofit là một Rest Client cho Android và Java và được tạo ra bởi
 Square. Nó giúp cho việc nhận và tải lên JSON (hoặc dữ liệu khác)
 một cách khá dễ dàng tới một WebService dựa trên mô hình REST.<br>
-Mở file build.gradle lên và import thư viện Retrofit và GSON. Khi
+- Mở file build.gradle lên và import thư viện Retrofit và GSON. Khi
 sử dụng Retrofit thì thư viện GSON sẽ giúp chúng ta convert từ
 Java objects thành JSON và ngược lại.<br>
 #### Thêm thư viện Retrofit và Gson

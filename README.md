@@ -317,6 +317,7 @@ public interface ApiPlaceholder {
 ```
 
 #### Gọi phương thức đã viết
+- Lấy dữ liệu theo từng **id**
 ```java
 public void retrofitCallApi() {
     ApiPlaceholder.apiService.getPostId(1).enqueue(new Callback<Post>() {
@@ -338,4 +339,21 @@ public void retrofitCallApi() {
 }
 ```
 
-### Web API
+- Lấy tất cả dữ liệu và lưu vào ArrayList
+```java
+ApiPlaceholder.apiService.getPosts().enqueue(new Callback<ArrayList<Post>>() {
+    @Override
+    public void onResponse(Call<ArrayList<Post>> call, Response<ArrayList<Post>> response) {
+        ArrayList<Post> data = response.body();
+        // TODO: process returned data
+        
+    }
+
+    @Override
+    public void onFailure(Call<ArrayList<Post>> call, Throwable t) {
+        Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+    }
+});
+```
+
+## Web API

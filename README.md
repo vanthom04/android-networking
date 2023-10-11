@@ -18,9 +18,181 @@ Copy và paste dòng dưới đây là **dependencies** trong file **build.gradl
 implementation("com.android.volley:volley:1.2.1")
 ```
 
-Nhấn Async Now để Android Studio download và nạp thư viện vào project.<br>
+Nhấn **Async Now** để Android Studio download và nạp thư viện vào project.<br>
 **`Lưu ý:`** *Để sử dụng Volley chúng ta phải cấp quyền Internet trong __AndroidManifest.xml__*
-#### **String Request**
+#### String Request
+```java
+// Instantiate the RequestQueue
+RequestQueue queue = Volley.newRequestQueue(this);
+String url = "https://www.google.com/";
+
+// Request a string response from the provided URL.
+StringRequest stringRequest = new StringRequest(
+    Request.Method.GET, 
+    url,
+    new Response.Listener<String>() {
+        @Override
+        public void onResponse(String response) {
+            // Display the first 500 character of the response string.
+            textView.setText("Response is: " + response.substring(0, 500));
+        }
+    },
+    new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+            textView.setText(String.valueOf(error));
+        }
+    }
+);
+
+// Add the request to the RequestQueue
+queue.add(stringRequest);
+```
+
+#### Json Object Request
+```java
+// Instantiate the RequestQueue
+RequestQueue queue = Volley.newRequestQueue(this);
+String url = "https://www.google.com/";
+
+JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+    Request.Method.GET,
+    url,
+    null,
+    new Response.Listener<JSONObject>() {
+        @Override
+        public void onResponse(JSONObject response) {
+            textView.setText("Response: " + response.toString());
+        }
+    },
+    new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+            // TODO: Handle error
+
+        }
+    }
+);
+
+// Add the request to the RequestQueue
+queue.add(jsonObjectRequest);
+```
+
+#### Json Array Request
+```java
+// Instantiate the RequestQueue
+RequestQueue queue = Volley.newRequestQueue(this);
+String url = "https://www.google.com/";
+
+JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+    Request.Method.GET,
+    url,
+    null,
+    new Response.Listener<JSONArray>() {
+        @Override
+        public void onResponse(JSONArray response) {
+            for (int i = 0; i < response.length; i++) {
+                // TODO: Get data in response
+
+            }
+        }
+    },
+    new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+            // TODO: Handle error
+
+        }
+    }
+);
+
+// Add the request to the RequestQueue
+queue.add(jsonArrayRequest);
+```
+
+#### String Request with method POST
+```java
+// Instantiate the RequestQueue
+RequestQueue queue = Volley.newRequestQueue(this);
+String url = "http://localhost:3000/users";
+
+StringRequest stringRequest = new StringRequest(
+    Request.Method.POST,
+    url,
+    new Response.Listener<String>() {
+        @Override
+        public void onResponse(String response) {
+            textView.setText(response);
+        }
+    },
+    new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+            // TODO: Handler error
+            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+        }
+    }
+) {
+    @Nullable
+    @Override
+    protected Map<String, String> getParams() throws AuthFailureError {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("username", "admin");
+        params.put("email", "example@gmail.com");
+        params.put("password", "abc123");
+        return params;
+    }
+};
+
+// Add the request to the RequestQueue
+queue.add(stringRequest);
+```
+
+#### Json Object Request with method POST
+```java
+// Instantiate the RequestQueue
+RequestQueue queue = Volley.newRequestQueue(this);
+String url = "https://www.google.com/";
+
+JSONObject parameters = new JSONObject();
+try {
+    parameters.put("username", "admin");
+    parameters.put("email", "example@gmail.com");
+    parameters.put("password", "abc123");
+} catch (JSONException e) {
+    e.printStackTrace();
+}
+
+JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+    Request.Method.POST,
+    url,
+    parameters,
+    new Response.Listener<JSONObject>() {
+        @Override
+        public void onResponse(JSONObject response) {
+            String content = "";
+            try {
+                content += response.getString("username") + "\n";
+                content += response.getString("email") + "\n";
+                content += response.getString("password") + "\n";
+                textView.setText(content);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    },
+    new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+            // TODO: Handler error
+            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+        }
+    }
+);
+
+// Add the request to the RequestQueue
+queue.add(stringRequest);
+```
 
 ## [Thư viện Retrofit](https://square.github.io/retrofit/)
 Retrofit là một Rest Client cho Android và Java và được tạo ra bởi
@@ -37,7 +209,7 @@ implementation("com.google.code.gson:gson:2.10.1")
 implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 ```
-Nhấn Async Now để Android Studio download và nạp thư viện vào project.<br>
+Nhấn **Async Now** để Android Studio download và nạp thư viện vào project.<br>
 #### Gọi API lấy dữ liệu
 ```java
 public interface ApiPlaceholder {

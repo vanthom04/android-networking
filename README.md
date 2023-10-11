@@ -59,3 +59,25 @@ public interface ApiPlaceholder {
 
 }
 ```
+
+#### Gọi phương thức đã viết
+```java
+public void retrofitCallApi() {
+    ApiPlaceholder.apiService.getPostId(1).enqueue(new Callback<Post>() {
+        @Override
+        public void onResponse(Call<Post> call, Response<Post> response) {
+            Post data = response.body();
+
+            userId.setText(String.valueOf(data.getUserId()));
+            id.setText(String.valueOf(data.getId()));
+            title.setText(data.getTitle());
+            body.setText(data.getBody());
+        }
+
+        @Override
+        public void onFailure(Call<Post> call, Throwable t) {
+            Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+        }
+    });
+}
+```

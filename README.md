@@ -346,11 +346,30 @@ ApiPlaceholder.apiService.getPosts().enqueue(new Callback<ArrayList<Post>>() {
     public void onResponse(Call<ArrayList<Post>> call, Response<ArrayList<Post>> response) {
         ArrayList<Post> data = response.body();
         // TODO: process returned data
-        
+
     }
 
     @Override
     public void onFailure(Call<ArrayList<Post>> call, Throwable t) {
+        Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+    }
+});
+```
+<br>
+
+- POST dữ liệu
+```java
+// Khởi tạo đối tượng info và gán các dữ liệu muốn POST lên server
+Info info = new Info(101, "title 101", "body 101");
+
+ApiPlaceholder.apiService.postPost(info).enqueue(new Callback<Post>() {
+    @Override
+    public void onResponse(Call<Post> call, Response<Post> response) {
+        Toast.makeText(MainActivity.this, String.valueOf(response.body().getId()), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onFailure(Call<Post> call, Throwable t) {
         Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
     }
 });

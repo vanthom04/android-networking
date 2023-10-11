@@ -11,8 +11,51 @@
 
 #### Định dạng dữ liệu Json
 - Cú pháp json theo các qui định sau:
-    - Dữ liệu gồm các cặp tên / giá trị
+    - Dữ liệu gồm các cặp tên/giá trị
+    - Dữ liệu được phân cách dấu phẩy "**,**"
+    - Dấu ngoặc nhọn "**{}**" dùng để giữ các đối tượng (object).
+    - Dấu ngoặc vuông "**[]**" dùng để giữ các mảng (array)
 
+- Dữ liệu được viết là các **cặp tên/giá trị**. Một cặp tên/giá trị gồm 1 trường tên đặt trong dấu nháy kép, 
+tiếp theo là dấu hai chấm và tiếp theo là giá trị (giá trị có dấu nháy kép hay không tùy theo kiểu dữ liệu).
+
+**Ví dụ:**
+```json
+"name": "json"
+"age": 18
+```
+
+- Đối tượng JSON (JSON Object): được viết trong cặp dấu ngoặc nhọn "**{}**". 
+Trong một đối tượng có có nhiều cặp tên / giá trị phân cách nhau bằng dấu phẩy "**,**".
+
+**Ví dụ:**
+```json
+{
+    "id": 1,
+    "name": "json",
+    "age": 18,
+    "isStudent": true
+}
+```
+
+- Mảng JSON (JSON Array): được bọc trong dấu ngoặc vuông "**[]**".
+Một mảng có thể chứa nhiều đối tượng (object).
+
+**Ví dụ:**
+```json
+{
+    "persons": [
+        {
+            "name": "Nguyen Van A",
+            "age": 19
+        },
+        {
+            "name": "Nguyen Van B",
+            "age": 20
+        }
+    ]
+}
+```
 ## [Thư viện Volley](https://google.github.io/volley/)
 
 #### Các class sử dụng trong Volley:

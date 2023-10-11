@@ -293,7 +293,8 @@ implementation("com.google.code.gson:gson:2.10.1")
 implementation("com.squareup.retrofit2:retrofit:2.9.0")
 implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 ```
-Nhấn **Async Now** để Android Studio download và nạp thư viện vào project.<br>
+Nhấn **Async Now** để Android Studio download và nạp thư viện vào project.<br><br>
+
 #### Gọi API lấy dữ liệu
 ```java
 public interface ApiPlaceholder {
@@ -375,6 +376,5 @@ ApiPlaceholder.apiService.postPost(info).enqueue(new Callback<Post>() {
     }
 });
 ```
-<br>
 
 ## Web API

@@ -3,12 +3,12 @@
 ## [Thư viện Volley](https://google.github.io/volley/)
 
 #### Các class sử dụng trong Volley:
-**RequestQueue:** Là hàng đợi giữ các Request.<br>
-**Request:** là lớp cơ sở của các Request trong Volley, chứa thông tin về request HTTP<br>
-**StringRequest:** Kế thừa từ Request, là class đại diện cho request trả về String.<br>
-**JSONObjectRequest:** Là HTTP request có response trả về là JSONObject.<br>
-**JSONArrayRequest:** Là HTTP request có response trả về là JSONArray. <br>
-**ImageRequest:** Là HTTP request có response trả về là Bitmap.<br>
+-**RequestQueue:** Là hàng đợi giữ các Request.<br>
+-**Request:** là lớp cơ sở của các Request trong Volley, chứa thông tin về request HTTP<br>
+-**StringRequest:** Kế thừa từ Request, là class đại diện cho request trả về String.<br>
+-**JSONObjectRequest:** Là HTTP request có response trả về là JSONObject.<br>
+-**JSONArrayRequest:** Là HTTP request có response trả về là JSONArray. <br>
+-**ImageRequest:** Là HTTP request có response trả về là Bitmap.<br>
 
 #### Thêm thư viện Volley
 Trước tiên chúng ta phải import thư viện này vào Android Studio. 

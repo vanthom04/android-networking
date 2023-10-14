@@ -277,7 +277,7 @@ JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
 );
 
 // Add the request to the RequestQueue
-queue.add(stringRequest);
+queue.add(jsonObjectRequest);
 ```
 
 ## [Thư viện Retrofit](https://square.github.io/retrofit/)
